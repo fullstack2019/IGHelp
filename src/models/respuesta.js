@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const preguntasSchema = new mongoose.Schema({
     respuesta: String,
-    pregunta: mongoose.Types.ObjectId,
-    archivos: Array,
+    pregunta: { type: mongoose.Schema.ObjectId, ref: 'Preguntas' },
+    archivos: [{ type: mongoose.Schema.ObjectId, ref: 'Archivos' }],
     calificacion: String,
-    idUsuario: mongoose.Types.ObjectId
+    idUsuario: { type: mongoose.Schema.ObjectId, ref: 'Usuarios' },
 });
 
 export default mongoose.model('preguntas', preguntasSchema);

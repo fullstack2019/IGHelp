@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const archivosSchema = new mongoose.Schema({
     archivo: String,
-    pregunta: mongoose.Types.ObjectId,
-    respuesta: mongoose.Types.ObjectId,
+    pregunta: { type: mongoose.Schema.ObjectId, ref: 'Preguntas' },
+    respuesta: { type: mongoose.Schema.ObjectId, ref: 'Respuestas' },
     url: String
 });
 
