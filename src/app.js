@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
 //Rutas
-app.use('/',HomeRoutes);
 app.use('/api', habilitiesRoutes);
+app.use('/',HomeRoutes);
 
 
 
