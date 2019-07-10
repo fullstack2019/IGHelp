@@ -1,5 +1,6 @@
 import express from'express'
 import bodyParser from 'body-parser'
+import HomeRoutes from './routes/HomeApi'
 import habilitiesRoutes from './routes/habilidades.routes'
 const app = express();
 
@@ -8,6 +9,7 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
 //Rutas
+app.use('/',HomeRoutes);
 app.use('/api', habilitiesRoutes);
 
 
