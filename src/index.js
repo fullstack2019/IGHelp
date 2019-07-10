@@ -8,7 +8,7 @@ if(err) throw err
 else {
     console.log('Conexion con Mongo Ok!');
     app.listen(port,()=>{
-        console.log('Server express Ok!, test Aplicaction in: \nhttp://localhost:'+port);
+        console.log('Server express Ok!, test application in: \nhttp://localhost:'+port);
     })
 }
 });
