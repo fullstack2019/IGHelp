@@ -8,6 +8,10 @@ apiHome.get('/',function(req,res){
 
 //Para todas las demas Rutas
 apiHome.get('*',function(req,res){
-    return res.status(200).send({'AppiResponse':'URL Invalid'})
+    return res.status(200).send({'AppiResponse':'GET URL Invalid'})
+ });
+ //Para todas las demas Rutas
+apiHome.post('*',function(req,res){
+    return res.status(200).send({'AppiResponse':'POST URL Invalid'})
  });
 export default apiHome;
