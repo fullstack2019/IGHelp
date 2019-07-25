@@ -1,9 +1,7 @@
 import express from 'express';
-import TokenControles from '../../controllers/Seguridad/tokens.controler';
-
 const api = express.Router()
+import TokenControler from '../../controllers/Seguridad/tokens.controler';
 
-api.post('/GenerateTokenApi', TokenControles.PostTokenAip);
-api.post('/ValidateTokenApi', TokenControles.PostTokenAipValidate);
+api.post('/GenerateTokenApi',TokenControler.PostTokenAip);
 
 export default api;

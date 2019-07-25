@@ -1,8 +1,8 @@
-let UsertAuthentication={
-    "UserName":"",
-    "Pasword":""
+let UsertAuthentication = {
+    "UserName": "",
+    "Pasword": ""
 }
 
-export default {
+export {
     UsertAuthentication
 }
